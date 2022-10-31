@@ -1,0 +1,250 @@
+/* ==================== Подключение обнуляющего стиля === (Обнуляет дефолтные настройки) === Начало === 2022-10 ==================== */
+@import "reset.css";
+/* ==================== Подключение обнуляющего стиля === (Обнуляет дефолтные настройки) === Конец === 2022-10 ==================== */
+
+/* ==================== Подключение шрифтов ===  === Начало === 2022-10 ==================== */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+/* ==================== Подключение шрифтов ===  === Конец === 2022-10 ==================== */
+
+.wrapper {
+  background-color: black;
+  line-height: 0;
+}
+
+.dna__container {
+  max-width: 800px;
+  min-height: 800px;
+  margin: 0 auto;
+  background-color: black;
+  padding: 50px 0px;
+  transform: rotate(45deg);
+}
+.line {
+  max-width: 700px;
+  min-height: 12px;
+  margin: 0 auto 40px;
+  position: relative;
+}
+.line:last-child {
+  margin: 0 auto;
+}
+.line::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  transform: translate(0px, -50%);
+  animation: lineBefore 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.line::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 47%;
+  transform: translate(0px, -50%);
+  animation: lineAfter 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.item1 {
+  min-height: 12px;
+  border-radius: 5px;
+  position: absolute;
+  right: 51%;
+  transform-origin: center right;
+  animation: item1 1s cubic-bezier(0.4, 0, 0.6, 1) alternate infinite;
+}
+.item2 {
+  min-height: 12px;
+  border-radius: 5px;
+  position: absolute;
+  left: 51%;
+  transform-origin: center left;
+  animation: item2 1s cubic-bezier(0.4, 0, 0.6, 1) alternate infinite;
+}
+
+/* ==================== Циклы === (Подробнее) === Начало === 2022-10 ==================== */
+@keyframes lineBefore {
+  0% {
+    left: 48%;
+    transform: translate(0px, -50%) scale(1.1);
+  }
+  50% {
+    left: 0;
+    transform: translate(0px, -50%) scale(1.1);
+  }
+  100% {
+    left: 46%;
+    transform: translate(0px, -50%) scale(0.35);
+  }
+}
+@keyframes lineAfter {
+  0% {
+    right: 48%;
+    transform: translate(0px, -50%) scale(0.35);
+  }
+  50% {
+    right: 0;
+    transform: translate(0px, -50%) scale(0.35);
+  }
+  100% {
+    right: 46%;
+    transform: translate(0px, -50%) scale(1.1);
+  }
+}
+@keyframes item1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 35%;
+  }
+}
+@keyframes item2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 35%;
+  }
+}
+/* ==================== Циклы === (Подробнее) === Конец === 2022-10 ==================== */
+
+[class*="line1__item"],
+[class*="line1"]::before,
+[class*="line1"]::after {
+  background-color: rgb(243, 116, 139);
+  animation-delay: 0.195s;
+}
+[class*="line2__item"],
+[class*="line2"]::before,
+[class*="line2"]::after {
+  background-color: rgb(246, 146, 136);
+  animation-delay: 0.39s;
+}
+[class*="line3__item"],
+[class*="line3"]::before,
+[class*="line3"]::after {
+  background-color: rgb(245, 182, 138);
+  animation-delay: 0.589s;
+}
+[class*="line4__item"],
+[class*="line4"]::before,
+[class*="line4"]::after {
+  background-color: rgb(252, 217, 138);
+  animation-delay: 0.807s;
+}
+[class*="line5__item"],
+[class*="line5"]::before,
+[class*="line5"]::after {
+  background-color: rgb(253, 255, 139);
+  animation-delay: 1s;
+}
+[class*="line6__item"],
+[class*="line6"]::before,
+[class*="line6"]::after {
+  background-color: rgb(228, 255, 140);
+  animation-delay: 1.188s;
+}
+[class*="line7__item"],
+[class*="line7"]::before,
+[class*="line7"]::after {
+  background-color: rgb(200, 255, 139);
+  animation-delay: 1.385s;
+}
+[class*="line8__item"],
+[class*="line8"]::before,
+[class*="line8"]::after {
+  background-color: rgb(172, 255, 138);
+  animation-delay: 1.57s;
+}
+[class*="line9__item"],
+[class*="line9"]::before,
+[class*="line9"]::after {
+  background-color: rgb(145, 255, 139);
+  animation-delay: 1.79s;
+}
+[class*="line10__item"],
+[class*="line10"]::before,
+[class*="line10"]::after {
+  background-color: rgb(143, 255, 167);
+  animation-delay: 1.999s;
+}
+[class*="line11__item"],
+[class*="line11"]::before,
+[class*="line11"]::after {
+  background-color: rgb(143, 255, 198);
+  animation-delay: 2.19s;
+}
+[class*="line12__item"],
+[class*="line12"]::before,
+[class*="line12"]::after {
+  background-color: rgb(144, 255, 230);
+  animation-delay: 2.38s;
+}
+[class*="line13__item"],
+[class*="line13"]::before,
+[class*="line13"]::after {
+  background-color: rgb(143, 255, 254);
+  animation-delay: 2.59s;
+}
+[class*="line14__item"],
+[class*="line14"]::before,
+[class*="line14"]::after {
+  background-color: rgb(138, 225, 251);
+  animation-delay: 2.802s;
+}
+[class*="line15__item"],
+[class*="line15"]::before,
+[class*="line15"]::after {
+  background-color: rgb(137, 188, 253);
+  animation-delay: 2.98s;
+}
+[class*="line16__item"],
+[class*="line16"]::before,
+[class*="line16"]::after {
+  background-color: rgb(137, 153, 252);
+  animation-delay: 3.195s;
+}
+[class*="line17__item"],
+[class*="line17"]::before,
+[class*="line17"]::after {
+  background-color: rgb(137, 122, 250);
+  animation-delay: 3.39s;
+}
+[class*="line18__item"],
+[class*="line18"]::before,
+[class*="line18"]::after {
+  background-color: rgb(165, 117, 251);
+  animation-delay: 3.59s;
+}
+[class*="line19__item"],
+[class*="line19"]::before,
+[class*="line19"]::after {
+  background-color: rgb(195, 113, 252);
+  animation-delay: 3.793s;
+}
+[class*="line20__item"],
+[class*="line20"]::before,
+[class*="line20"]::after {
+  background-color: rgb(224, 111, 249);
+  animation-delay: 4.004s;
+}
+
+.header {
+  text-align: center;
+  font-weight: 700;
+  font-size: 46px;
+  padding: 20px 0px 20px 0px;
+  margin: 0px 0px 150px 0px;
+  line-height: 1;
+  word-spacing: 10px;
+  letter-spacing: 5px;
+  text-decoration: underline;
+}
